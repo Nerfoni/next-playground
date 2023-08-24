@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "types:contentful": "export $(cat .env.local | awk '!/^\\s*#/' | awk '!/^\\s*$/'); cf-content-types-generator -X -s $CONTENTFUL_SPACE_ID -t $CONTENTFUL_MANAGEMENT_TOKEN -o ./contentful/types && prettier --write contentful/types"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -16,6 +17,7 @@
     "autoprefixer": "10.4.15",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "contentful": "10.5.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "lucide-react": "^0.268.0",
@@ -29,6 +31,7 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "cf-content-types-generator": "2.12.2",
     "eslint-config-prettier": "9.0.0",
     "prettier": "3.0.2",
     "prettier-plugin-tailwindcss": "0.5.3"
