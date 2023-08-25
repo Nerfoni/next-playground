@@ -44,7 +44,7 @@ Timeline.Item = ({
       <div className="absolute left-[calc(0%-0.375rem)] top-0 h-1 w-3 rounded-full bg-foreground lg:left-[calc(50%-0.375rem)]" />
 
       <div className={`relative ${textAlign} px-16 py-4 sm:text-left ${margin} sm:m-0`}>
-        <div className="date-range mb-2 inline-flex items-center text-2xl">
+        <div className="date-range mb-2 inline-flex items-center text-2xl	">
           <h2>{from.toLocaleDateString("en-US", { month: "short", year: "numeric" })}</h2>
           <ChevronRight className="mx-2 text-black dark:text-purple-300" width="1rem" />
           <h2>{to ? to.toLocaleDateString("en-US", { month: "short", year: "numeric" }) : "Present"}</h2>
