@@ -59,7 +59,6 @@ Timeline.Item = ({
                 <div className="mb-2 mr-2">
                   <Badge variant={skill.favourite ? "hightlighted" : "default"}>
                     <p className="mr-1">{skill.title}</p>
-                    {skill.favourite && <p>&#10024;</p>}
                   </Badge>
                 </div>
               );

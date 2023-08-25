@@ -1,7 +1,5 @@
-import { Progress } from "@/components/ui/progress";
 import { Timeline } from "@/components/timeline/Timeline";
 import { getEmployments } from "@/contentful/employments";
-import ColorModeButton from "@/components/ColorMode";
 import { getEducations } from "@/contentful/educations";
 
 export default async function Home() {
@@ -10,13 +8,8 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-10 px-10 sm:py-24">
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="pb-4 text-6xl font-bold">Sampo Riikkilä</h1>
-        <p className="text-xl">Work History</p>
-        <ColorModeButton />
-      </div>
-
       <section className="work-history max-w-7xl">
+        <h2 className="text-center text-5xl font-bold font-thin uppercase">Work history</h2>
         <Timeline>
           {employments?.map((employment, index) => (
             <Timeline.Item
@@ -31,10 +24,10 @@ export default async function Home() {
             />
           ))}
         </Timeline>
-        <Progress value={75} />
       </section>
 
       <section className="education w-full max-w-7xl">
+        <h2 className="text-center text-5xl font-bold font-thin uppercase">Education</h2>
         <Timeline>
           {educations?.map((education, index) => (
             <Timeline.Item

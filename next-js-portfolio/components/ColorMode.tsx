@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import { Button } from "./ui/button";
 
 const ColorModeButton = () => {
   const [mounted, setMounted] = useState(false);
@@ -16,9 +17,9 @@ const ColorModeButton = () => {
   }
 
   return (
-    <button className="" onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>
+    <Button variant="ghost" className="" onClick={() => (theme === "dark" ? setTheme("light") : setTheme("dark"))}>
       {theme === "dark" ? <Moon /> : <Sun />}
-    </button>
+    </Button>
   );
 };
 
