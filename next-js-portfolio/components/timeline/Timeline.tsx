@@ -4,7 +4,7 @@ import React from "react";
 import { Badge } from "../ui/badge";
 
 const Timeline = ({ children }: { children?: React.ReactNode }) => (
-  <div className="relative my-16">
+  <div className="relative my-10">
     <div className="z-1 employment-timeline__line absolute left-0 top-0 h-full w-1 translate-x-[-50%] bg-foreground lg:left-[50%]" />
     {children}
     <div className="absolute bottom-0 left-[calc(0%-0.375rem)] h-1 w-3 rounded-full bg-foreground lg:left-[calc(50%-0.375rem)]" />
@@ -43,15 +43,15 @@ Timeline.Item = ({
     <div className="relative">
       <div className="absolute left-[calc(0%-0.375rem)] top-0 h-1 w-3 rounded-full bg-foreground lg:left-[calc(50%-0.375rem)]" />
 
-      <div className={`relative ${textAlign} px-16 py-4 sm:text-left ${margin} sm:m-0`}>
+      <div className={`relative ${textAlign} px-6 py-4 sm:text-left lg:px-12 ${margin} sm:m-0`}>
         <div className="date-range mb-2 inline-flex items-center text-2xl	">
           <h2>{from.toLocaleDateString("en-US", { month: "short", year: "numeric" })}</h2>
           <ChevronRight className="mx-2 text-black dark:text-purple-300" width="1rem" />
           <h2>{to ? to.toLocaleDateString("en-US", { month: "short", year: "numeric" }) : "Present"}</h2>
         </div>
-        <h3 className="employer mb-2 mt-3 text-2xl font-extralight">{title}</h3>
+        <h3 className="employer mb-2 mt-3 text-2xl font-light dark:font-extralight">{title}</h3>
         {subtitle && <h4 className="position text-lg font-bold">{subtitle}</h4>}
-        {description && <p className="description my-3 font-extralight">{description}</p>}
+        {description && <p className="description my-3 font-light dark:font-extralight">{description}</p>}
         {skills && (
           <div className={`skills mt-6 flex flex-wrap sm:justify-start ${justify}`}>
             {sortedSkills?.map((skill) => {
