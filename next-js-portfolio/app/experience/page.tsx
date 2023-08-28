@@ -1,7 +1,6 @@
 import { Timeline } from "@/components/timeline/Timeline";
 import { getEmployments } from "@/contentful/employments";
 import { getEducations } from "@/contentful/educations";
-import { Progress } from "@/components/ui/progress";
 
 export default async function Experience() {
   const employments = await getEmployments();
@@ -26,7 +25,6 @@ export default async function Experience() {
             />
           ))}
         </Timeline>
-        {/*<Progress value={75} />*/}
 
         <h2 className="text-center text-3xl font-extralight uppercase dark:font-thin md:text-4xl">Education</h2>
         <Timeline>

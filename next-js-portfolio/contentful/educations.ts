@@ -12,7 +12,7 @@ export interface Education {
   description?: string;
 }
 
-export function parseContentfulEmployments(educationEntries: EducationEntry[]): Education[] | null {
+export function parseContentfulEducations(educationEntries: EducationEntry[]): Education[] | null {
   if (!educationEntries) {
     return null;
   }
@@ -33,5 +33,5 @@ export async function getEducations(): Promise<Education[] | null> {
     content_type: "education",
   });
 
-  return parseContentfulEmployments(educations.items);
+  return parseContentfulEducations(educations.items);
 }

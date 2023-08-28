@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsdk": "/Users/samporiikkila/Projects/personal/next-playground/next-js-portfolio/node_modules/typescript/lib"
+  }
+}
